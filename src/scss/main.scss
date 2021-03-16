@@ -1,0 +1,201 @@
+@import 'fonts';
+@import 'vendor';
+
+body {
+    background: #fff;
+    font-family: 'Open Sans';
+}
+
+header {
+    .title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 49px;
+        text-align: center;
+        color: #45852d;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.centered {
+    text-align: center;
+}
+
+.error {
+    color: red;
+}
+
+.container {
+    max-width: 1280px;
+    padding: 0 50px;
+    margin: 0 auto;
+}
+
+.filterWrapper {
+    margin-top: 43px;
+    margin-bottom: 45px;
+
+    label {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.3px;
+        color: #363636;
+        margin-right: 10px;
+    }
+
+    input {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.3px;
+        border: 1px solid #d8d8d8;
+        box-sizing: border-box;
+        border-radius: 25px;
+        max-width: 418px;
+        width: 100%;
+        padding: 10px 25px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.buttonWrapper {
+    width: 100%;
+    margin-top: 22px;
+    margin-bottom: 77px;
+
+    .button {
+        display: block;
+        cursor: pointer;
+        margin: 0 auto;
+        border: 1px solid #d8d8d8;
+        box-sizing: border-box;
+        border-radius: 25px;
+        background: #fff;
+
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.3px;
+        color: #363636;
+
+        padding: 12px 33px;
+
+        transition: background 0.3s linear;
+
+        &:hover {
+            background: rgb(194, 192, 192);
+        }
+
+        &:focus,
+        &:active {
+            outline: none;
+        }
+    }
+}
+
+.productsWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 38px 22px;
+
+    transition: all 0.3s ease;
+
+    @media screen and (max-width: 1270px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 860px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    max-width: 379px;
+    min-width: 200px;
+    border: 1px solid #d8d8d8;
+    cursor: pointer;
+
+    &-image {
+        position: relative;
+        display: flex;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &-type {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 8px 10px;
+
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 16px;
+        color: #ffffff;
+
+        &[data-color='IndependentLiving'] {
+            background: #006f79;
+        }
+
+        &[data-color='SupportAvailable'] {
+            background: #ec6608;
+        }
+    }
+
+    &-info {
+        padding: 15px 20px 17px;
+        background: #f8f8f8;
+        color: #363636;
+
+        &-title {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 27px;
+        }
+
+        &-adress {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        &-price {
+            margin-top: 15px;
+
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 22px;
+
+            .price {
+                font-weight: bold;
+            }
+        }
+
+        &-description {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 19px;
+        }
+    }
+}
